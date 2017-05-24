@@ -8,10 +8,10 @@ object ExampleRequests extends ServicesConfiguration {
 
   val baseUrl = baseUrlFor("tax-calculator-service")
 
-    val navigateToCalculatorStartPage =
-      http("Navigate to Calculator Start Page")
-        .get(s"$baseUrl/your-pay")
-        .check(status.is(200))
+  val navigateToCalculatorStartPage =
+    http("Navigate to Calculator Start Page")
+      .get(s"$baseUrl/your-pay")
+      .check(status.is(200))
 
 
   val postHowMuchYouGetPaid =
