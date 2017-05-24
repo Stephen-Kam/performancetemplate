@@ -4,14 +4,14 @@ import uk.gov.hmrc.performance.conf.ServicesConfiguration
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
 
-object HelloWorldRequests extends ServicesConfiguration {
+object ExampleRequests extends ServicesConfiguration {
 
-  val baseUrl = baseUrlFor("hello-world-frontend")
+  val baseUrl = baseUrlFor("tax-calculator-service")
 
-  val navigateToCalculatorStartPage =
-    http("Navigate to Calculator Start Page")
-      .get(s"$baseUrl/your-pay")
-      .check(status.is(200))
+    val navigateToCalculatorStartPage =
+      http("Navigate to Calculator Start Page")
+        .get(s"$baseUrl/your-pay")
+        .check(status.is(200))
 
 
   val postHowMuchYouGetPaid =
